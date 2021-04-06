@@ -12,16 +12,17 @@
 
 #include <string.h>
 
-void	ft_memset(void *des, int c, size_t n)
+void	*ft_memset(void *des, int c, size_t n)
 {
-	unsigned char *str;
+	unsigned char 	*str;
 
 	str = (unsigned char *)des;
-	while(n > 0)
+	while(n > 0 && *str)
 	{
 		
 		*str = c;
 		str++;
 		n--;
 	}
+	return (des);
 }
