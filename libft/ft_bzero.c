@@ -14,10 +14,10 @@
 
 void	ft_bzero(void *des, size_t n)
 {
-	unsigned char	*str;
+	char			*str;
 	size_t			length;
 	
-	str = (unsigned char *)des;
+	str = (char *)des;
 	length = ft_strlen(str);
 	if (length < n)
 	{
