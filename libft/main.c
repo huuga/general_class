@@ -40,6 +40,10 @@ int		main()
 	}
 	printf("memccpy %s\n", yoyo);
 	printf("memchr %s\n", (char *)ft_memchr(da, 'd', 5));
+	char f1[] = "12345";
+	char f2[] = "123";
+	printf("memcmp %d\n", ft_memcmp(f2, f1, 0));
+	printf("memcmp %d\n", ft_memcmp(f2, f1, 4));
 	free(mem2);
 	free(mem);
 
