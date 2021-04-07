@@ -57,4 +57,8 @@ int		main()
 	printf("strdup %s\n", duppy);
 	free(duppy);
 
+	char rk[] = "dfgwq";
+	char rq[10];
+	printf("strcpy %s\n", ft_strcpy(rq, rk));
+
 }
