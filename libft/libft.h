@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/06 01:06:36 by marvin            #+#    #+#             */
-/*   Updated: 2021/04/06 01:06:36 by marvin           ###   ########.fr       */
+/*   Created: 2021/04/07 09:09:51 by rlacresh          #+#    #+#             */
+/*   Updated: 2021/04/07 09:09:51 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <string.h>
 #include <unistd.h>
 #include <stdlib.h>
