@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/06 08:02:24 by marvin            #+#    #+#             */
-/*   Updated: 2021/04/06 08:02:24 by marvin           ###   ########.fr       */
+/*   Created: 2021/04/07 08:44:12 by marvin            #+#    #+#             */
+/*   Updated: 2021/04/07 08:44:12 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void *ft_memccpy(void *dest, const void *src, int c, size_t n)
+void *ft_memchr(void *s, int c, size_t n)
 {	
 	char		f;
 
 	f = c;
 	while (n > 0)
 	{
-		*(char *)dest = *(char *)src;
-		if (*(char *)dest == f)
+		if (*(char *)s == f)
 		{
-			return(dest + 1);
+			return(s);
 		}
-		dest++;
-		src++;
+		s++;
 		n--;
 	}	
 	return (NULL);
