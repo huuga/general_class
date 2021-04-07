@@ -47,4 +47,14 @@ int		main()
 	free(mem2);
 	free(mem);
 
+	char *slovo = "lisma";
+	char *duppy = ft_strdup(slovo);
+	if (duppy == NULL)
+	{
+		write(1, "strdup is NULL\n", 14);
+		return  (1);
+	}
+	printf("strdup %s\n", duppy);
+	free(duppy);
+
 }
