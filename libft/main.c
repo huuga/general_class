@@ -61,4 +61,11 @@ int		main()
 	char rq[10];
 	printf("strcpy %s\n", ft_strcpy(rq, rk));
 
+	char qw[] = "lancer";
+	char mv[10];
+	ft_strncpy(mv, qw, 9);
+	for (int i = 0; i < 10; i++)
+		printf("%c ", mv[i]);
+	printf("\n");
+
 }
