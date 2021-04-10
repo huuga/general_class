@@ -68,4 +68,13 @@ int		main()
 		printf("%c ", mv[i]);
 	printf("\n");
 
+	char sq[] = "abc";
+	char fde[] = "kolaasf";
+	printf("strcat %s\n", ft_strcat(sq, fde));
+
+	char sgt[] = "hewlett";
+	char fbc[] = "packard";
+	printf("strncat %s\n", ft_strncat(sgt, fbc, 4));
+
+
 }
