@@ -1,34 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/07 09:09:09 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/07 09:09:09 by rlacresh         ###   ########.fr       */
+/*   Created: 2021/04/11 19:12:33 by rlacresh          #+#    #+#             */
+/*   Updated: 2021/04/11 19:12:33 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dest, void *src, size_t n)
+size_t 		ft_strlcat(char *dst, char *src, size_t dsize)
 {
-	char	*buffer;
-	char	*buffer_copy;
-	size_t	n_copy;
+	char *dst_copy;
+	char *src_copy;
+	size_t n;
+	size_t dlen;
 
-	n_copy = n;
-	buffer = (char *)malloc(sizeof(char) * n);
-	buffer_copy = buffer;
-	while(n > 0)
+	dst_copy = dst;
+	src_copy = src;
+	n = dsize;
+	while (n-- != 0 && *dst != '\0')
+		dst++;
+	dlen = dst - dst_copy;
+	n = dsize - dlen;
+	if (n-- == 0)
+		return(dlen + ft_strlen(src));
+	while (*src != '\0')
 	{
-		*buffer = *(char *)src;
-		buffer++;
+		if (n != 0)
+		{
+			*dst++ = *src;
+			n--;
+		}
 		src++;
-		n--;
 	}
-	ft_memcpy(dest, buffer_copy, n_copy);
-	free(buffer_copy);
-	return (dest);
+	*dst = '\0';
+	return (dlen + (src - src_copy));
 }
