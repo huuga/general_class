@@ -76,5 +76,26 @@ int		main()
 	char fbc[] = "packard";
 	printf("strncat %s\n", ft_strncat(sgt, fbc, 4));
 
+	printf("---------------------\n");
+	char fger[] = "12345678";
+	char shorty[] = "";
+	printf("strchr %s\n", ft_strchr(fger, '5'));
+	if ((ft_strchr(fger, 'h')) == NULL)
+		printf("NULL good\n");
+	if (*(ft_strchr(fger, 0)) == 0)
+		printf("null terminator good\n");
+	if (*(ft_strchr(shorty, 0)) == 0)
+		printf("shorty good\n"); 
+	
+	printf("---------------------\n");
+	char fgerd[] = "123454321";
+	printf("strrchr %s\n", ft_strrchr(fgerd, '2'));
+	if ((ft_strrchr(fgerd, 'h')) == NULL)
+		printf("NULL good\n");
+	if (*(ft_strrchr(fgerd, 0)) == 0)
+	 	printf("null terminator good\n");
+	if (*(ft_strrchr(shorty, 0)) == 0)
+	 	printf("shorty good\n");
+
 
 }
