@@ -97,5 +97,9 @@ int		main()
 	if (*(ft_strrchr(shorty, 0)) == 0)
 	 	printf("shorty good\n");
 
-
+	printf("---------------------\n");
+	char fgasd[] = "123 124 126";
+    printf("strstr %s\n", ft_strstr(fgasd, "124"));
+	if ((ft_strstr(fgasd, "hello")) == NULL)
+		printf("NULL good\n");
 }

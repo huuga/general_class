@@ -31,3 +31,4 @@ char		*ft_strncat(char *dest, char *src, size_t n);
 size_t		ft_strlcat(char *dst, char *src, size_t dsize);
 char		*ft_strchr(char *str, int c);
 char		*ft_strrchr(char *str, int c);
+char		*ft_strstr(char *haystack, char *needle);
