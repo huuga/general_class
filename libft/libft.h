@@ -33,3 +33,5 @@ char		*ft_strchr(char *str, int c);
 char		*ft_strrchr(char *str, int c);
 char		*ft_strstr(char *haystack, char *needle);
 char		*ft_strnstr(char *haystack, char *needle, size_t len);
+int			ft_strcmp(char *s1, char *s2);
+int			ft_strncmp(char *s1, char *s2, size_t n);

@@ -12,32 +12,32 @@
 
 #include <stdlib.h>
 
-char *ft_strnstr(char *haystack, char *needle, size_t len)
+char	*ft_strnstr(char *haystack, char *needle, size_t len)
 {
-    char    *needle_start;
-    char    *temp;
-    
-    needle_start = needle;
-    while (*haystack && len > 0)
-    {
-        if (*haystack == *needle)
-        {
-            temp = haystack;
-            while (*needle && len > 0)
-            {
-                if (*haystack != *needle)
-                    break;
-                haystack++;
-                needle++;
-                len--;
-            }
-            if (*needle == 0)
-                return (temp);
-        }
-        haystack++;
-        if (len != 0)
-            len--;
-        needle = needle_start;
-    }
-    return (NULL);
+	char	*needle_start;
+	char	*temp;
+	
+	needle_start = needle;
+	while (*haystack && len > 0)
+	{
+		if (*haystack == *needle)
+		{
+			temp = haystack;
+			while (*needle && len > 0)
+			{
+				if (*haystack != *needle)
+					break;
+				haystack++;
+				needle++;
+				len--;
+			}
+			if (*needle == 0)
+				return (temp);
+		}
+		haystack++;
+		if (len != 0)
+			len--;
+		needle = needle_start;
+	}
+	return (NULL);
 }

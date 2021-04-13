@@ -110,4 +110,18 @@ int		main()
 		printf("NULL good\n");
 	if ((ft_strnstr(ffe, "bas", 16)) == NULL)
 		printf("NULL good\n");
+
+	printf("---------------------\n");
+	char sr1[] = "12345";
+	char sr2[] = "12346";
+	printf("strcmp %d\n", ft_strcmp(sr1, sr2));
+	char sfr1[] = "12345";
+	char sfr2[] = "1234";
+	printf("strcmp %d\n", ft_strcmp(sfr1, sfr2));
+	printf("strcmp %d\n", ft_strcmp(sfr1, sr1));
+
+	printf("---------------------\n");
+	printf("strncmp %d\n", ft_strncmp(sr1, sr2, 5));
+	printf("strncmp %d\n", ft_strncmp(sr1, sr2, 4));
+
 }

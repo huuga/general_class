@@ -1,40 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlacresh <rlacresh@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/12 23:16:34 by rlacresh          #+#    #+#             */
-/*   Updated: 2021/04/12 23:16:34 by rlacresh         ###   ########.fr       */
+/*   Created: 2021/04/13 07:03:00 by rlacresh          #+#    #+#             */
+/*   Updated: 2021/04/13 07:03:00 by rlacresh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-char	*ft_strstr(char *haystack, char *needle)
+int		ft_strcmp(char *s1, char *s2)
 {
-	char	*needle_start;
-	char	*temp;
-	
-	needle_start = needle;
-	while (*haystack)
+	while (*s1 || *s2)
 	{
-		if (*haystack == *needle)
-		{
-			temp = haystack;
-			while (*needle)
-			{
-				if (*haystack != *needle)
-					break;
-				haystack++;
-				needle++;
-			}
-			if (*needle == 0)
-				return (temp);
-		}
-		haystack++;
-		needle = needle_start;
+		if (*s1 != *s2)
+			return (*s1 - *s2);
+		s1++;
+		s2++;
 	}
-	return (NULL);
+	return (0);
 }
