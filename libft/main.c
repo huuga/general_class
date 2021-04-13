@@ -102,4 +102,12 @@ int		main()
     printf("strstr %s\n", ft_strstr(fgasd, "124"));
 	if ((ft_strstr(fgasd, "hello")) == NULL)
 		printf("NULL good\n");
+	
+	printf("---------------------\n");
+	char ffe[] = "ban bar bal";
+    printf("strnstr %s\n", ft_strnstr(ffe, "bar", 7));
+	if ((ft_strnstr(ffe, "bar", 6)) == NULL)
+		printf("NULL good\n");
+	if ((ft_strnstr(ffe, "bas", 16)) == NULL)
+		printf("NULL good\n");
 }
