@@ -191,4 +191,43 @@ int		main()
 	printf("tolower 5 : %c\n", ft_tolower('5'));	
 	printf("tolower M-^A : %c\n", ft_tolower(129));
 
+	printf("---------------------\n");
+	int kl = 3;
+	char *sre = ft_memalloc(kl);
+	char *sre_cop = sre;
+	if (sre != NULL)
+	{
+		printf ("memalloc ^@^@^@ : ");
+		while (kl > 0)
+		{
+			printf("%c", *sre);
+			kl--;
+			sre++;
+		}
+		printf("\n");
+		free(sre_cop);
+	}
+	else
+		printf ("memalloc of 10 is NULL");
+	if (ft_memalloc(20000000000000) == NULL)
+		printf("memalloc of 20TB is NULL\n");
+
+	printf("---------------------\n");
+	char **ggh = ft_memalloc(4);
+	ggh[0] = ft_memalloc(5);
+	*ggh[0] = 'a';
+	ggh[1] = ft_memalloc(5);
+	*ggh[1] = 'b';
+	ggh[2]= ft_memalloc(5);
+	*ggh[2] = 'c';
+	ggh[3] = NULL;
+	printf("before memdel\nggh1 - %s\nggh2 - %s\nggh3 - %s\n", ggh[0], ggh[1], ggh[2]);
+
+	//ft_memdel((void **)ggh);
+	free(ggh[0]);
+	printf("after memdel\nggh1 - %s\nggh2 - %s\nggh3 - %s\n", ggh[0], ggh[1], ggh[2]);
+// 	if (ggh[0] == NULL)
+// 		printf("gh1 is NULL");
+// 	else
+// 		printf("gh1 is NOT a NULL\n");
 }
